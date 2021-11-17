@@ -1,0 +1,63 @@
+/*
+General color scheme: Green and white.
+Favicon background: #006600 (dark green)
+Favicon text: #FFFFFF (white)
+*/
+
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: Georgia, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cce0cc;
+}
+
+.horizontal-page {
+    display: flex;
+    
+}
+
+img.resize {
+    display: flex;
+    margin: 0vw;
+    width: 100vw;
+}
+
+.menu {
+    background-color: #E2F9E2;
+    border: 5px solid #006600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 40vw;
+    height: 50vh;
+}
+
+.menu button {
+    width: 20vw;
+    height: 10vh;
+    background-color: #006600;
+    color: white;
+    font-size: 1.8em;
+    font-family: Georgia, serif;
+}
+
+form {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 50vw;
+    height: 40vh;
+}
+
+input {
+    width: 20vw;
+    height: 6vh;
+}
+
