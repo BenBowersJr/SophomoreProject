@@ -1,63 +1,463 @@
+/* Mobile Styles */
+@media only screen and (max-width: 960px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0vh;
+        x-overflow: hidden;
+        background-color: #70AF70;
+    }
+
+    .home-banner {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+        width: 100vw;
+        height: 25vh;
+        margin-bottom: 4vh;
+
+        background-color: #006600;
+        color: white;
+
+        font-size: 3em;
+        font-family: Georgia, serif;
+
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        height: 50vh;
+        width: 80vw;
+
+        background-color: #E2F9E2;
+        border: 5px solid #006600;
+    }
+
+    .menu button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 70%;
+        height: 30%;
+
+        background-color: #006600;
+        font-size: 2.5em;
+        font-family: Georgia, serif;
+        color: white;
+    }
+
+    input {
+        display: flex;
+        height: 15%;
+        width: 70%;
+    }
+
+    input::placeholder {
+        font-size: 1.6em;
+    }
+
+    form.menu input {
+        display: flex;
+        width: 55vw;
+        height: 7vh;
+    }
+
+    #login-form input[type=submit] {
+        height: 12vh;
+    }
+
+    .input-field-box {
+        margin-bottom: 3vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-field-box label
+    {
+        font-size: 1.6em;
+    }
+
+    input[type=submit] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 70%;
+        height: 30%;
+
+        background-color: #006600;
+        font-size: 2.5em;
+        font-family: Georgia, serif;
+        color: white;
+    }
+
+    select#userType {
+        display: flex;
+        margin-bottom: 3vh;
+        font-size: 1.4em;
+        width: 70%;
+    }
+
+    #isPatientSelected {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        align-items: center;
+    }
+
+    td {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 69vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
+    .divided { /* To give the impression of nice borders along the bottoms of input divs */
+        border-bottom: 2px solid #006600;
+    }
+
+    td input[type=checkbox] {
+        display: flex;
+        height: 6vh;
+        width: 10vw;
+    }
+
+    td p {
+        display: flex;
+        width: 35vw;
+
+        font-size: 1.4em;
+    }
+
+    .patient-home-input {
+        display: flex;
+        width: 69vw;
+        height: 7vh;
+    }
+
+    .no-skinny-divving {
+        margin-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    input[type=submit].no-skinny-divving {
+        margin-top: 2vh;
+        padding-bottom: 1vh;
+        margin-bottom: 2vh;
+    }
+
+    form .patient-home-input {
+        margin-bottom: 3vh;
+    }
+
+    #doctor-home-form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3vh;
+        align-items: center;
+        height: 55vh;
+    }
+
+    #doctor-home-form input {
+        margin-bottom: 2vh;
+    }
+
+    select#filterBy {
+        width: 60vw;
+        height: 10vh;
+        display: flex;
+        margin-bottom: 3vh;
+        font-size: 1.3em;
+    }
+
+    table#doctor-home-table {
+        border-collapse: collapse;
+        background-color: #E2F9E2;
+    }
+
+    table#doctor-home-table, th, td {
+        border: 2px solid #006600;
+    }
+
+    #doctor-home-table tbody {
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        height: auto;
+    }
+
+    #doctor-home-table tr {
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+    }
+
+    #doctor-home-table tr.headings {
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+    }
+
+    #doctor-home-table td {
+        height: 4vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        display: flex;
+        width: 21vw;
+        font-size: 1.2em;
+    }
+
+    #doctor-home-table th {
+        display: flex;
+        height: 4vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        text-align: left;
+        font-size: 1.4em;
+    }
+
+}
+
 /*
-General color scheme: Green and white.
-Favicon background: #006600 (dark green)
-Favicon text: #FFFFFF (white)
+The only real differences between pages on desktop are the background images.
+
+Just do inline styling for that.
+
 */
 
 
-body {
-    max-width: 100%;
-    overflow-x: hidden;
-    font-family: Georgia, serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #cce0cc;
-}
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
 
-.horizontal-page {
-    display: flex;
-    
-}
+    body {
+        background-image: url('img/ec-bg-page-final.png');
 
-img.resize {
-    display: flex;
-    margin: 0vw;
-    width: 100vw;
-}
+        background-size: 100vw;
+        background-repeat: repeat;
+        background-position: top 1vh;
 
-.menu {
-    background-color: #E2F9E2;
-    border: 5px solid #006600;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 40vw;
-    height: 50vh;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-.menu button {
-    width: 20vw;
-    height: 10vh;
-    background-color: #006600;
-    color: white;
-    font-size: 1.8em;
-    font-family: Georgia, serif;
-}
+        padding: 0vh;
+        margin-top: 0px; /* To remove the pesky little blank space at the top of the homepage. */
+        margin-top: 0px;
 
-form {
-    border: 2px solid red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 50vw;
-    height: 40vh;
-}
+        max-width: 100%;
+        overflow-x: hidden;
+        font-family: Georgia, serif;
+    }
 
-input {
-    width: 20vw;
-    height: 6vh;
-}
+    .home-banner {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
 
+        width: 100vw;
+        height: 25vh;
+        margin-bottom: 4vh;
+
+        opacity: 0; /* Because I'm lazy. */
+    }
+
+    .home-banner:hover {
+        cursor: pointer;
+    }
+
+    .menu {
+        background-color: #E2F9E2;
+        border: 5px solid #006600;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 40vw;
+        height: 50vh;
+    }
+
+    .menu button {
+        width: 20vw;
+        height: 10vh;
+        background-color: #006600;
+        color: white;
+        font-size: 1.8em;
+        font-family: Georgia, serif;
+    }
+
+    button:hover { /* The cool buttons club */
+        background-color: #009700;
+        cursor: pointer;
+    }
+
+    form {
+        background-color: #E2F9E2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 59vw;
+        height: 40vh;
+    }
+
+    input {
+        width: 20vw;
+        height: 6vh;
+    }
+
+
+    input[type=submit] {
+        background-color: #006600;
+        color: white;
+        font-size: 1.5em;
+        font-family: Georgia, serif;
+        height: 8vh;
+    }
+
+
+    /* From login-reg.css file */
+
+    .form-text p {
+        margin: 1vh;
+    }
+
+    input {
+        width: 20vw;
+        height: 5vh;
+        margin-bottom: 2vh;
+    }
+
+    #userType {
+        display: flex;
+        height: 5vh;
+        width: 20vw;
+        margin-bottom: 2.5vh;
+    }
+
+    #normal-register {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        align-items: center;
+    }
+
+    #isPatientSelected {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        align-items: center;
+    }
+
+    .input-field-box { /* These contain the input fields and their associated paragraph elements */
+        display: flex;
+        flex-direction: column;
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+    }
+
+
+
+    /* Copied from mobile style queries above */
+    .patient-home-input {
+        display: flex;
+        width: 69vw;
+        height: 7vh;
+    }
+
+    .no-skinny-divving {
+        margin-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    input[type=submit].no-skinny-divving {
+        margin-top: 2vh;
+        padding-bottom: 1vh;
+        margin-bottom: 2vh;
+    }
+
+    form .patient-home-input {
+        margin-bottom: 3vh;
+    }
+
+    #doctor-home-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3vh;
+        align-items: center;
+        height: 55vh;
+    }
+
+    #doctor-home-form input {
+        margin-bottom: 2vh;
+    }
+
+    select#filterBy {
+        width: 60vw;
+        height: 10vh;
+        display: flex;
+        margin-bottom: 3vh;
+        font-size: 1.3em;
+    }
+
+    table#doctor-home-table {
+        border-collapse: collapse;
+        background-color: #E2F9E2;
+    }
+
+    table#doctor-home-table, th, td {
+        border: 2px solid #006600;
+    }
+
+    #doctor-home-table tbody {
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        height: auto;
+    }
+
+    #doctor-home-table tr {
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+    }
+
+    #doctor-home-table tr.headings {
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+    }
+
+    #doctor-home-table td {
+        height: 4vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        display: flex;
+        width: 21vw;
+        font-size: 1.2em;
+    }
+
+    #doctor-home-table th {
+        display: flex;
+        height: 4vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        text-align: left;
+        font-size: 1.4em;
+    }
+
+}

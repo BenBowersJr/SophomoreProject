@@ -9,6 +9,7 @@ class caregiver extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'employee_id',
         'patient_id',
         'date',
         'morning_med',

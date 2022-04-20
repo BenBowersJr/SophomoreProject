@@ -22,6 +22,12 @@ class CreateRostersTable extends Migration
             $table->string('caregiver2');
             $table->string('caregiver3');
             $table->string('caregiver4');
+            $table->string('supervisorID');
+            $table->string('doctorID');
+            $table->string('caregiver1ID');
+            $table->string('caregiver2ID');
+            $table->string('caregiver3ID');
+            $table->string('caregiver4ID');
             $table->timestamps();
         });
     }

@@ -22,7 +22,6 @@ class patient extends Model
         'ec_phone',
         'group',
         'admission_date',
-        'role_id',
         'balance_due',
         'approved'
     ];

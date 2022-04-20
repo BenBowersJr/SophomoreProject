@@ -15,6 +15,12 @@ class roster extends Model
         'caregiver1',
         'caregiver2',
         'caregiver3',
-        'caregiver4'
+        'caregiver4',
+        'supervisorID',
+        'doctorID',
+        'caregiver1ID',
+        'caregiver2ID',
+        'caregiver3ID',
+        'caregiver4ID'
     ];
 }

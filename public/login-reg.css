@@ -1,0 +1,145 @@
+/*
+General color scheme: Green and white.
+Favicon background: #006600 (dark green)
+Favicon text: #FFFFFF (white)
+*/
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    font-family: Georgia, serif;
+    background-image: url('img/ec-bg-page-final.png');
+    background-size: 100vw;
+    background-repeat: repeat;
+    background-position: top 1vh;
+}
+
+.aligner-element { /* Invisible element to help center things vertically because I'm smart */
+    height: 15vh;
+}
+
+.home-redirect {
+    height: 15vh;
+    width: 50vw;
+}
+
+.home-redirect:hover { /* Indicates it's clickable */
+    cursor: pointer;
+}
+
+img.resize { /* So the image doesn't look all wonky */
+    display: flex;
+    margin: 0vw;
+    width: 100vw;
+}
+
+.menu {
+    background-color: #E2F9E2;
+    border: 5px solid #006600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 40vw;
+    height: 50vh;
+}
+
+input[type=submit] {
+    background-color: #006600;
+    color: white;
+    font-size: 1.5em;
+    font-family: Georgia, serif;
+    height: 6vh;
+}
+
+input[type=submit]:hover { /* The cool button club */
+    cursor: pointer;
+    background-color: #009700;
+}
+
+form {
+    background-color: #E2F9E2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    margin-left: 1vw;
+    width: 59vw;
+}
+
+.login-banner {
+    background-image: url("img/login-banner2.png");
+    background-position: center;
+    background-size: 100vh;
+    width: 40vw;
+    height: 20vh;
+}
+
+.register-banner {
+    background-image: url("img/register-banner.png");
+    background-position: center;
+    background-size: 100vh;
+    width: 40vw;
+    height: 20vh;
+}
+
+.form-text h2 {
+    margin: 1vh;
+}
+
+.form-text p {
+    margin: 1vh;
+}
+
+input {
+    width: 20vw;
+    height: 5vh;
+    margin-bottom: 2vh;
+}
+
+#userType {
+    display: flex;
+    height: 5vh;
+    width: 20vw;
+    margin-bottom: 2.5vh;
+}
+
+#normal-register {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    align-items: center;
+}
+
+#isPatientSelected {
+    display: flex;
+    width: 40vw;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-field-box { /* These contain the input fields and their associated paragraph elements */
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+
+#dollarBeside{
+    display: flex;
+    /* align-items: center; */
+
+}
+
+#dollarBeside span {
+    font-size: 1.5em;
+    color: gray;
+}

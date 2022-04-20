@@ -14,15 +14,18 @@ class CreateCaregiversTable extends Migration
     public function up()
     {
         Schema::create('caregivers', function (Blueprint $table) {
-            $table->id('employee_id');
-            $table->integer('patient_id');
-            $table->date('date');
-            $table->boolean('morning_med');
-            $table->boolean('afternoon_med');
-            $table->boolean('night_med');
-            $table->boolean('breakfast');
-            $table->boolean('lunch');
-            $table->boolean('dinner');
+            $table->id('employee_id')
+                ->constrained('employees')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+            $table->integer('patient_id')->nullable();
+            $table->date('date')->nullable();
+            $table->boolean('morning_med')->default(0);
+            $table->boolean('afternoon_med')->default(0);
+            $table->boolean('night_med')->default(0);
+            $table->boolean('breakfast')->default(0);
+            $table->boolean('lunch')->default(0);
+            $table->boolean('dinner')->default(0);
             $table->timestamps();
         });
     }

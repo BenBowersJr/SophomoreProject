@@ -1,10 +1,11 @@
 <?php
 
+use App\Models\employee;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRolesTable extends Migration
+class SeedUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +14,9 @@ class CreateRolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
-            $table->id('role_id');
-            $table->integer('access_level');
-            $table->timestamps();
-        });
+        $employee = employee::create(array('f_name' => 'admin', 'l_name' => 'admin', 'email' => 'admin@test.com', 'password' => '123', 'role_id' => 1));
+        $employee->approved = 1;
+        $employee->save();
     }
 
     /**
@@ -27,6 +26,6 @@ class CreateRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles');
+        //
     }
 }

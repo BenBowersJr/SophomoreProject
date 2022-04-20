@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreatePatientsTable extends Migration
 {
@@ -14,7 +15,7 @@ class CreatePatientsTable extends Migration
     public function up()
     {
         Schema::create('patients', function (Blueprint $table) {
-            $table->id('patient_id');
+            $table->id()->onDelete('cascade');
             $table->string('f_name');
             $table->string('l_name');
             $table->string('email');
@@ -26,11 +27,11 @@ class CreatePatientsTable extends Migration
             $table->string('ec_name');
             $table->string('ec_relation');
             $table->string('ec_phone');
-            $table->string('group');
-            $table->date('admission_date');
-            $table->integer('role_id');
-            $table->decimal('balance_due', 10, 2);
-            $table->boolean('approved');
+            $table->string('group')->nullable();
+            $table->date('admission_date')->nullable();
+            $table->integer('role_id')->default(5);
+            $table->decimal('balance_due', 10, 2)->default(0);
+            $table->boolean('approved')->default(0);
             $table->timestamps();
         });
     }
